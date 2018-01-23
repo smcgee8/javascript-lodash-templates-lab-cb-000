@@ -27,6 +27,7 @@ function createPost() {
 }
 
 function postComment() {
+  console.log("hellooo")
   var comment = document.getElementById('comment').value;
   var commenter = document.getElementById('commenter').value;
 
