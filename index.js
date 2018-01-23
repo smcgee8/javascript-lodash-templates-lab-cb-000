@@ -8,7 +8,6 @@ function createPost() {
   var pageTemp = document.getElementById('page-template').innerHTML;
   var pageTempFn = _.template(pageTemp);
   var pageTempHTML = pageTempFn();
-  console.log(pageTempHTML);
   var pageDiv = document.getElementById('page');
   pageDiv.innerHTML += pageTempHTML;
 }
