@@ -36,7 +36,12 @@
     </script>
     <script id="comments-template" type="text/x-lodash-template">
       //Collection of comments
-      //Comments form
+      <form id="comment-form" onsubmit="postComment();return false;">
+        Title: <input type="text" id="title"><br>
+        Body: <input type="textarea" id="body"><br>
+        Author: <input type="text" id="author"><br>
+        <input type="submit">
+      </form>
     </script>
     <script id="comment-template" type="text/x-lodash-template">
       <p><%= comment %></p>
