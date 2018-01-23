@@ -30,5 +30,9 @@ function postComment() {
   var comment = document.getElementById('comment').value;
   var commenter = document.getElementById('commenter').value;
 
-  var commentTemp = document.getElementById('comment-')
+  var commentTemp = document.getElementById('comment-template').innerHTML;
+  var commentTempFn = _.template(commentTemp);
+  var commentTempHTML = commentTempFn({'comment': comment, 'commenter': commenter});
+  var commentsDiv = document.getElementById('comments');
+  commentsDiv.innerHTML += commentTempHTML;
 }
