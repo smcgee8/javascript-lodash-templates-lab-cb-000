@@ -17,8 +17,18 @@ function createPost() {
   var postTempHTML = postTempFn({'title': title, 'body': body, 'author': author});
   var postDiv = document.getElementById('post');
   postDiv.innerHTML += postTempHTML;
+
+  //Build comments section
+  var commentsTemp = document.getElementById('comments-template').innerHTML;
+  var commentsTempFn = _.template(commentsTemp);
+  var commentsTempHTML = commentsTempFn();
+  var pageDiv = document.getElementById('page');
+  pageDiv.innerHTML += commentsTempHTML;
 }
 
 function postComment() {
-  
+  var comment = document.getElementById('comment').value;
+  var commenter = document.getElementById('commenter').value;
+
+  var commentTemp = document.getElementById('comment-')
 }
