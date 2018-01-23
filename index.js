@@ -33,6 +33,7 @@ function postComment() {
   var commentTemp = document.getElementById('comment-template').innerHTML;
   var commentTempFn = _.template(commentTemp);
   var commentTempHTML = commentTempFn({'comment': comment, 'commenter': commenter});
+  console.log(commentTempHTML)
   var commentsDiv = document.getElementById('comments');
   commentsDiv.innerHTML += commentTempHTML;
 }
