@@ -27,14 +27,12 @@ function createPost() {
 }
 
 function postComment() {
-  console.log("hellooo")
   var comment = document.getElementById('comment').value;
   var commenter = document.getElementById('commenter').value;
 
   var commentTemp = document.getElementById('comment-template').innerHTML;
   var commentTempFn = _.template(commentTemp);
   var commentTempHTML = commentTempFn({'comment': comment, 'commenter': commenter});
-  console.log(commentTempHTML)
   var commentsDiv = document.getElementById('comments');
   commentsDiv.innerHTML += commentTempHTML;
 }
