@@ -18,3 +18,7 @@ function createPost() {
   var postDiv = document.getElementById('post');
   postDiv.innerHTML += postTempHTML;
 }
+
+function postComment() {
+  
+}
