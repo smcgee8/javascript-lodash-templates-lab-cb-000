@@ -15,4 +15,6 @@ function createPost() {
   var postTemp = document.getElementById('post-template').innerHTML;
   var postTempFn = _.template(postTemp);
   var postTempHTML = postTempFn({'title': title, 'body': body, 'author': author});
+  var postDiv = document.getElementById('post');
+  postDiv.innerHTML += postTempHTML;
 }
